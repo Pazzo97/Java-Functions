@@ -29,8 +29,8 @@ public class Main {
                 boolean output;
                 System.out.println("Please enter a word to check if is palindrome:");
                 text=scanner2.nextLine();
-//                output=isPalindrome(text);
-//                System.out.println(output);
+                output=isPalindrome(text);
+                System.out.println(output);
                 break;
 
             case 3:
@@ -63,6 +63,14 @@ public class Main {
             reverse += character[i];
         }
         return reverse;
+    }
+
+    public static boolean isPalindrome(String text){
+        String reversed = reverseString(text);
+        if (reversed.equals(text)){
+            return true;
+        }
+        return false;
     }
 
 
