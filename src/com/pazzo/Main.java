@@ -41,8 +41,8 @@ public class Main {
                 System.out.println("Please enter 2 different numbers:");
                 min=scanner3.nextInt();
                 max=scanner3.nextInt();
-//                result=randBetween(min,max);
-//                System.out.println(result);
+                result=randBetween(min,max);
+                System.out.println(result);
                 break;
 
             case 4:
@@ -73,6 +73,10 @@ public class Main {
         return false;
     }
 
+    public static  int randBetween(Integer min, Integer max){
+        int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+        return random_int;
+    }
 
 }
 
